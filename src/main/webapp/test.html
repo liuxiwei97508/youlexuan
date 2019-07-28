@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="angular.min.js"></script>
+<script>
+	var app =angular.module("myapp",[]);
+	app.controller("myController",function($scope){
+		$scope.add=function(){
+			$scope.hah= parseInt($scope.x)+parseInt($scope.y);
+		};
+		$scope.list=[11,22,33,44];
+	})
+
+</script>
+</head>
+<body ng-app="myapp" ng-controller="myController">
+	<input ng-model="x"/>
+	<input ng-model="y"/>
+	<button ng-click="add()">运算</button>
+	<br>
+	{{hah}}
+	<br>
+	<select />
+		<option ng-repeat="x in list">{{x}}</option>
+	</select>
+</body>
+</html>
